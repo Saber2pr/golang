@@ -20,8 +20,9 @@ RUN wget https://go.dev/dl/go1.17.8.linux-amd64.tar.gz
 RUN tar -zxvf go1.17.8.linux-amd64.tar.gz -C /usr/local
 
 # set go env
-ENV GOPATH /usr/local/go
-ENV PATH $GOPATH/bin:$PATH
-RUN chmod -R 777 "$GOPATH"
+ENV GOPATH /usr/local/gopath
+ENV GOROOT /usr/local/go
+ENV PATH $GOROOT/bin:$PATH
+RUN chmod -R 777 "$GOROOT"
 
 WORKDIR /home
