@@ -4,7 +4,9 @@ setup by docker.
 
 ```bash
 docker pull saber2pr/golang:latest
+```
 
+```bash
 docker run --rm saber2pr/golang:latest go
 ```
 
