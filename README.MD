@@ -4,6 +4,8 @@ setup by docker.
 
 ```bash
 docker pull saber2pr/golang:latest
+
+docker run --rm saber2pr/golang:latest go
 ```
 
 ### vscode extension
