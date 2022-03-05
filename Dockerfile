@@ -7,6 +7,8 @@ RUN apt -y install wget
 # other tools
 RUN apt -y install curl
 RUN apt -y install git
+# cpp for go dlv
+RUN apt -y install build-essential
 
 # git config
 RUN git config --global http.sslBackend gnutls
