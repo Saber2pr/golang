@@ -23,3 +23,10 @@ RUN echo "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/b
 RUN git config --global http.sslBackend gnutls
 # disable git ssl
 ENV GIT_SSL_NO_VERIFY true
+
+# set go env
+ENV GOPATH /usr/local/go
+ENV PATH $GOPATH/bin:$PATH
+RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
+
+WORKDIR /home
