@@ -1,10 +1,12 @@
 FROM ubuntu:latest
 
 # update
-RUN apt-get update
-
+RUN apt update
 # download wget
-RUN apt-get -y install wget
+RUN apt -y install wget
+# other tools
+RUN apt -y install curl
+RUN apt -y install git
 
 # download go
 RUN wget https://go.dev/dl/go1.17.8.linux-amd64.tar.gz
