@@ -1,5 +1,8 @@
 FROM ubuntu:latest
 
+# download wget
+RUN apt-get -y install wget
+
 # download go
 RUN wget https://go.dev/dl/go1.17.8.linux-amd64.tar.gz
 
