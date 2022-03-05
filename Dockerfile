@@ -1,5 +1,8 @@
 FROM ubuntu:latest
 
+# update
+RUN apt-get update
+
 # download wget
 RUN apt-get -y install wget
 
