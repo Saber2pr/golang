@@ -27,4 +27,8 @@ ENV GOROOT /usr/local/go
 ENV PATH $GOROOT/bin:$PATH
 RUN chmod -R 777 "$GOROOT"
 
+# proxy
+ENV http_proxy "http://host.docker.internal:10809"
+ENV https_proxy "http://host.docker.internal:10809"
+
 WORKDIR /home
